@@ -1,21 +1,19 @@
 package com.proyecto.notas.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-public class Nota {
+@Table(name = "Notas") public class Nota {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idNota;
-    private String titulo;
-    private String descripcion;
     private String rutaImagen;
+    private String descripcion;
+    private String titulo;
 
-    public Nota(int idNota, String titulo, String descripcion, String rutaImagen) {
+
+    public Nota(int idNota, String descripcion, String rutaImagen, String titulo) {
         this.idNota = idNota;
         this.titulo = titulo;
         this.descripcion = descripcion;
