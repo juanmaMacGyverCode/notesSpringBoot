@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ControllerNotes {
 
     //private ComponentsNotes _componentsNotes;
+    @Autowired
     private NoteServiceImpl noteServiceImpl;
 
     @GetMapping("/")

@@ -1,8 +1,15 @@
 package com.proyecto.notas.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Nota {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int idNota;
     private String titulo;
     private String descripcion;
@@ -14,6 +21,10 @@ public class Nota {
         this.descripcion = descripcion;
         this.rutaImagen = rutaImagen;
     }
+    public Nota() {
+
+    }
+
 
     public int getIdNota() {
         return idNota;
